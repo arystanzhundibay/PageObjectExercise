@@ -15,3 +15,4 @@ class LoginPageLocators:
 
 class ProductPageLocators:
     ADD_TO_BASKET = (By.CLASS_NAME, 'btn-add-to-basket')
+    SUCCESS_MESSAGE = (By.CLASS_NAME, 'alert-safe')
