@@ -1,4 +1,3 @@
-import time
 import pytest
 
 from selenium.webdriver.common.by import By
@@ -8,7 +7,7 @@ from .pages.login_page import LoginPage
 
 
 @pytest.mark.login_guest
-class TestLoginFromMainPage():
+class TestLoginFromMainPage:
     def should_be_login_link(self):
         assert self.is_element_present(By.ID, "login_link"), "Login link is not presented"
 
@@ -22,9 +21,9 @@ class TestLoginFromMainPage():
         login_page.should_be_login_page()
 
 
-# def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
-#     link = "http://selenium1py.pythonanywhere.com"
-#     page = MainPage(browser, link)
-#     page.open()
-#     page.click_basket_button()
-#     page.basket_is_empty()
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    link = "http://selenium1py.pythonanywhere.com"
+    page = MainPage(browser, link)
+    page.open()
+    page.click_basket_button()
+    page.basket_is_empty()

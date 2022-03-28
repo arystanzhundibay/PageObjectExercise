@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
+    BASKET_BUTTON = (By.CSS_SELECTOR, "span.btn-group")
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     USER_ICON = (By.CSS_SELECTOR, ".icon-user")
@@ -27,3 +28,4 @@ class ProductPageLocators:
     SUCCESS_MESSAGE = (By.CLASS_NAME, 'alert-safe')
     BASKET_BUTTON = (By.CSS_SELECTOR, "span.btn-group")
     BASKET_IS_EMPTY_MESSAGE = (By.ID, 'content_inner')
+    CONFIRM_MESSAGE = (By.CSS_SELECTOR, 'div.alert strong')

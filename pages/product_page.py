@@ -43,6 +43,11 @@ class ProductPage(BasePage):
         message = self.browser.find_element(*ProductPageLocators.BASKET_IS_EMPTY_MESSAGE).text
         assert languages[language] in message
 
+    def check_message(self, messages):
+        correct = ['Coders at Work', 'Deferred benefit offer', '£19.99']
+        for i in range(len(messages)):
+            assert messages[i].text == correct[i], link
+
     def click_add_to_bucket_button(self):
         button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         button.click()
